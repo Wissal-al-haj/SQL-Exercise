@@ -36,3 +36,17 @@ SELECT * FROM students where name = 'Layal';"
 //3
 "DELETE FROM Students WHERE Name="Layal";"
 
+//JOINS
+//1
+"SELECT employees.Name, companies.Name, companies.Date
+FROM employees ,companies
+INNER JOIN companies ON employees.Company = companies.Name;"
+//2
+"SELECT employees.Name
+FROM employees 
+INNER JOIN companies ON companies.Name=employees.Company WHERE Companies.Date < 2000;"
+//3
+"SELECT employees.Company
+FROM employees
+INNER JOIN companies on companies.name=employees.Company
+WHERE Role="Graphic Designer";"
