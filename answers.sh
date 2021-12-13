@@ -39,7 +39,7 @@ SELECT * FROM students where name = 'Layal';"
 //JOINS
 //1
 "SELECT employees.Name, companies.Name, companies.Date
-FROM employees ,companies
+FROM employees
 INNER JOIN companies ON employees.Company = companies.Name;"
 //2
 "SELECT employees.Name
@@ -50,3 +50,28 @@ INNER JOIN companies ON companies.Name=employees.Company WHERE Companies.Date < 
 FROM employees
 INNER JOIN companies on companies.name=employees.Company
 WHERE Role="Graphic Designer";"
+
+//Count & Filter
+//1
+"SELECT students.name
+FROM students
+WHERE students.Points = (SELECT max(points) FROM students);"
+//2
+"SELECT AVG(Points)
+FROM students;"
+//3
+"SELECT count(points)
+FROM students
+where Points = (select max(points) from students);
+orrr
+SELECT count(points)
+FROM students
+where Points = 500;"
+//4
+"SELECT students.Name
+FROM students
+WHERE students.name LIKE '%s%';"
+//5
+"SELECT students.name 
+FROM students
+ORDER BY Points ASC;"
