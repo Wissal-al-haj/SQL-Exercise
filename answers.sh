@@ -18,3 +18,21 @@ WHERE Name='Basma';"
 SET Points=Points-1
 WHERE Name='Alex';"
 
+
+//Creating Table
+//1
+"CREATE TABLE Graduates (
+    ID Integer NOTNULL AUTOINCREMENT PRIMARYKEY,
+    Name varchar(20) NOTNULL UNIQUE,
+    Age Integer(3),
+    Gender varchar(1)
+    Points Integer(3),
+    Graduation date (dd/mm/yyyy)
+);
+INSERT INTO Graduates (ID,Name,Age,Gender,Points)
+SELECT * FROM students where name = 'Layal';"
+//2
+"INSERT INTO Graduates(Name,Age,Gender,Points,Graduation)VALUES("Layal",18,"F",350,"08/09/2018");"
+//3
+"DELETE FROM Students WHERE Name="Layal";"
+
